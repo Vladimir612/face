@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(148, 148, 233);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+.head {
+  width: 200px;
+  height: 270px;
+  background-color: rgb(241, 188, 168);
+  border-radius: 10% 10% 45% 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.eyes,
+.brows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+.eye {
+  background-color: white;
+  height: 35px;
+  width: 55px;
+  border-radius: 100%;
+  border-top: 6px solid #e4af9c;
+  border-bottom: 3px solid #e4af9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.eye::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: hsl(79deg, 73%, 76%);
+  border-radius: 100%;
+  margin-left: 16px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(51, 113, 66);
+  border-radius: 100%;
+  margin-left: 25px;
+  margin-bottom: 8px;
+}
+.brows {
+  transform: translateY(-25px);
+}
+.brow {
+  height: 35px;
+  width: 55px;
+  border-radius: 100%;
+  border-top: 6px solid hsl(27, 28%, 46%);
+}
+.nose {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 0 100% 100%;
+  border: 2px solid hsl(27, 28%, 46%);
+  border-top: none;
+  bottom: 75px;
+}
+.ears {
+  z-index: -1;
+
+  position: absolute;
+  display: flex;
+  width: 236px;
+  justify-content: space-between;
+}
+.ear {
+  border-radius: 3rem;
+  width: 25px;
+  height: 50px;
+  background-color: rgb(247, 208, 194);
+}
+.mouth {
+  width: 80px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 35px;
+  border-radius: 2rem 2rem 4rem 4rem;
+  border: solid #e4af9c;
+  border-width: 4px 3px 2px 3px;
+}
+.hair {
+  position: absolute;
+  width: 200px;
+  height: 95px;
+  background-color: hsl(27, 28%, 46%);
+  top: -35px;
+  border-radius: 100% 100% 0 0;
+}
+.hair::before,
+.hair::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: hsl(27, 28%, 46%);
+  bottom: -40px;
+}
+.hair::after {
+  right: 0;
+}
+.hair-corner {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.hair-corner::before,
+.hair-corner::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(27, 28%, 46%);
+  bottom: -5px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+.hair-corner::after {
+  left: initial;
+  right: 4px;
+}
